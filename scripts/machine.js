@@ -22,3 +22,20 @@ function setBalance(value){
 
 
 }
+
+// machine id> hide all > show id
+function showOnly(id){
+    const addMoney=document.getElementById('add-money');
+    const cashOut=document.getElementById('cashout');
+
+    // hide all section
+    addMoney.classList.add('hidden');
+    cashOut.classList.add('hidden');
+
+    //unable hidden section
+    const selected=document.getElementById(id);
+    selected.classList.remove('hidden');
+
+    
+}
+
