@@ -27,10 +27,12 @@ function setBalance(value){
 function showOnly(id){
     const addMoney=document.getElementById('add-money');
     const cashOut=document.getElementById('cashout');
+    const history=document.getElementById('history');
 
     // hide all section
     addMoney.classList.add('hidden');
     cashOut.classList.add('hidden');
+    history.classList.add('hidden');
 
     //unable hidden section
     const selected=document.getElementById(id);

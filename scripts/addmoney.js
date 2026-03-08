@@ -28,7 +28,22 @@ document.getElementById('add-money-btn').addEventListener('click',function(){
         alert(`add money success from ${bankAccount} at ${new Date()}` );
          // 4- set amount
     setBalance(newBalance);
-    console.log(newBalance);
+    // console.log(newBalance);
+
+        //1- history container ke dhore niye ashobo
+        const history=document.getElementById('history-container');
+
+        //2- new div create korbo
+        const newHistory=document.createElement('div');
+        //3- new div inner html add korbo
+        newHistory.innerHTML=`
+        <div class="transaction-card p-5 bg-base-100 rounded-md mb-3">
+        add money success from ${bankAccount} ,acc-no ${accno} at ${new Date()}
+     </div>
+        `
+
+        //4- history container e new div ke append korbo
+        history.append(newHistory);
 
         return ;
     }
